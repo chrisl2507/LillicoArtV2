@@ -139,12 +139,13 @@ h6 { font-size: var(--text-base); font-weight: 600; }
 
 /* Eyebrow / gallery label */
 .label {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.55rem;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 0.75rem;
   font-weight: 500;
-  letter-spacing: 0.28em;
+  font-style: normal;
+  letter-spacing: 0.32em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.45);
+  color: rgba(255,255,255,0.5);
   margin-bottom: 2rem;
 }
 
@@ -419,10 +420,11 @@ body.page-interior nav {
 
 /* Nav links */
 .nav-link {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.625rem;
-  font-weight: 400;
-  letter-spacing: var(--tracking-wide);
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: 0.25em;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
@@ -482,7 +484,11 @@ body.page-interior nav {
 .nav-menu.is-open { display: flex; }
 
 .nav-menu .nav-link {
+  font-family: 'Cormorant Garamond', Georgia, serif;
   font-size: 0.9rem;
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: 0.25em;
   color: rgba(255, 255, 255, 0.7);
 }
 
@@ -501,7 +507,7 @@ body.page-interior nav {
   }
 
   .nav-menu .nav-link {
-    font-size: 0.625rem;
+    font-size: 0.8rem;
     color: rgba(255, 255, 255, 0.6);
   }
 }
@@ -570,10 +576,11 @@ body.nav-open { overflow: hidden; }
 }
 
 .hero-eyebrow {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.55rem;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 0.75rem;
   font-weight: 500;
-  letter-spacing: 0.28em;
+  font-style: normal;
+  letter-spacing: 0.3em;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.55);
   margin-bottom: 1rem;
@@ -629,10 +636,11 @@ body.nav-open { overflow: hidden; }
   display: inline-flex;
   align-items: center;
   gap: 0.75rem;
-  font-family: 'Inter', sans-serif;
-  font-size: 0.625rem;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 0.75rem;
   font-weight: 500;
-  letter-spacing: var(--tracking-wide);
+  font-style: normal;
+  letter-spacing: 0.3em;
   text-transform: uppercase;
   color: var(--white);
   text-decoration: none;
@@ -694,10 +702,11 @@ body.nav-open { overflow: hidden; }
   display: inline-flex;
   align-items: center;
   gap: 1rem;
-  font-family: 'Inter', sans-serif;
-  font-size: 0.625rem;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 0.75rem;
   font-weight: 500;
-  letter-spacing: var(--tracking-wide);
+  font-style: normal;
+  letter-spacing: 0.3em;
   text-transform: uppercase;
   color: var(--white);
   text-decoration: none;
@@ -1300,10 +1309,11 @@ body.nav-open { overflow: hidden; }
 
 .form-group label {
   display: block;
-  font-family: 'Inter', sans-serif;
-  font-size: 0.6rem;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 0.75rem;
   font-weight: 500;
-  letter-spacing: var(--tracking-widest);
+  font-style: normal;
+  letter-spacing: 0.3em;
   text-transform: uppercase;
   color: rgba(255,255,255,0.55);
   margin-bottom: 0.75rem;
@@ -1361,10 +1371,11 @@ body.nav-open { overflow: hidden; }
   display: inline-flex;
   align-items: center;
   gap: 1rem;
-  font-family: 'Inter', sans-serif;
-  font-size: 0.625rem;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 0.75rem;
   font-weight: 500;
-  letter-spacing: var(--tracking-wide);
+  font-style: normal;
+  letter-spacing: 0.3em;
   text-transform: uppercase;
   color: var(--white);
   text-decoration: none;
@@ -1391,10 +1402,11 @@ body.nav-open { overflow: hidden; }
 
 .btn-outline {
   display: inline-block;
-  font-family: 'Inter', sans-serif;
-  font-size: 0.625rem;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 0.75rem;
   font-weight: 500;
-  letter-spacing: var(--tracking-wide);
+  font-style: normal;
+  letter-spacing: 0.3em;
   text-transform: uppercase;
   color: var(--white);
   text-decoration: none;
@@ -1413,10 +1425,11 @@ body.nav-open { overflow: hidden; }
   display: inline-flex;
   align-items: center;
   gap: 1rem;
-  font-family: 'Inter', sans-serif;
-  font-size: 0.625rem;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 0.75rem;
   font-weight: 500;
-  letter-spacing: var(--tracking-wide);
+  font-style: normal;
+  letter-spacing: 0.3em;
   text-transform: uppercase;
   color: var(--white);
   background: rgba(139, 111, 71, 0.2);
@@ -1530,9 +1543,11 @@ body.nav-open { overflow: hidden; }
   background: none;
   border: none;
   color: rgba(255,255,255,0.35);
-  font-family: 'Inter', sans-serif;
-  font-size: 0.6rem;
-  letter-spacing: 0.2em;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: 0.3em;
   text-transform: uppercase;
   cursor: pointer;
   transition: color 0.2s ease;
@@ -1555,9 +1570,11 @@ body.nav-open { overflow: hidden; }
   background: none;
   border: 1px solid rgba(255,255,255,0.15);
   color: rgba(255,255,255,0.45);
-  font-family: 'Inter', sans-serif;
-  font-size: 0.55rem;
-  letter-spacing: 0.2em;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: 0.3em;
   text-transform: uppercase;
   padding: 0.6em 1.2em;
   cursor: pointer;
@@ -1695,9 +1712,11 @@ body.nav-open { overflow: hidden; }
   background: none;
   border: 1px solid rgba(255,255,255,0.15);
   color: rgba(255,255,255,0.45);
-  font-family: 'Inter', sans-serif;
-  font-size: 0.55rem;
-  letter-spacing: 0.2em;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: 0.3em;
   text-transform: uppercase;
   padding: 0.6em 1.2em;
   cursor: pointer;
@@ -1724,10 +1743,11 @@ body.nav-open { overflow: hidden; }
 .gallery-filters::-webkit-scrollbar { display: none; }
 
 .filter-btn {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.625rem;
-  font-weight: 400;
-  letter-spacing: var(--tracking-wide);
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: 0.3em;
   text-transform: uppercase;
   color: var(--silver);
   background: none;
@@ -1808,9 +1828,11 @@ body.nav-open { overflow: hidden; }
 }
 
 .gallery-item-category {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.6rem;
-  letter-spacing: var(--tracking-widest);
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: 0.3em;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.6);
 }
@@ -2110,10 +2132,11 @@ body.nav-open { overflow: hidden; }
 }
 
 .pricing-price {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.6rem;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 0.75rem;
   font-weight: 500;
-  letter-spacing: var(--tracking-wide);
+  font-style: normal;
+  letter-spacing: 0.3em;
   text-transform: uppercase;
   color: var(--umber);
   margin-bottom: var(--space-md);
@@ -2288,8 +2311,11 @@ body.nav-open { overflow: hidden; }
 }
 
 .footer-copy {
-  font-size: 0.6rem;
-  letter-spacing: var(--tracking-widest);
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: 0.3em;
   text-transform: uppercase;
   color: var(--silver);
 }
@@ -2302,8 +2328,11 @@ body.nav-open { overflow: hidden; }
 }
 
 .footer-links a {
-  font-size: 0.6rem;
-  letter-spacing: var(--tracking-widest);
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: 0.3em;
   text-transform: uppercase;
   color: var(--silver);
   text-decoration: none;
@@ -2367,7 +2396,11 @@ body.nav-open { overflow: hidden; }
   .nav-menu.is-open { display: flex; }
 
   .nav-menu .nav-link {
+    font-family: 'Cormorant Garamond', Georgia, serif;
     font-size: 0.9rem;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 0.25em;
     color: rgba(255, 255, 255, 0.7);
     min-height: 44px;
     display: flex;
@@ -2572,10 +2605,11 @@ body.nav-open { overflow: hidden; }
   min-height: 44px;
   min-width: 90px;
   padding: 0.6em 1.4em;
-  font-family: 'Inter', sans-serif;
-  font-size: 0.625rem;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 0.75rem;
   font-weight: 500;
-  letter-spacing: var(--tracking-wide);
+  font-style: normal;
+  letter-spacing: 0.3em;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.7);
   background: none;
