@@ -168,15 +168,16 @@
     var heroEyebrow = document.querySelector('.hero-eyebrow');
     var heroCredentials = document.querySelector('.hero-credentials');
     var heroRule = document.querySelector('.hero-rule');
-    var heroTitle = document.querySelector('.hero-title');
+    var heroTitleLines = document.querySelectorAll('.hero-title__line');
     var navMenu = document.querySelector('.nav-menu');
 
     // Cancel CSS failsafe animation — GSAP is in control now
     document.body.style.animation = 'none';
     // Set initial hidden states
     gsap.set(document.body, { opacity: 1 });
-    gsap.set([heroImg, heroGradient, navBrand, heroEyebrow, heroTitle, navMenu], { opacity: 0 });
-    gsap.set([navBrand, heroEyebrow, heroTitle], { y: 14 });
+    gsap.set([heroImg, heroGradient, navBrand, heroEyebrow, navMenu], { opacity: 0 });
+    gsap.set([navBrand, heroEyebrow], { y: 14 });
+    gsap.set(heroTitleLines, { opacity: 0, y: 14 });
     if (heroCredentials) gsap.set(heroCredentials, { opacity: 0, y: 14 });
     if (heroRule) gsap.set(heroRule, { opacity: 0 });
 
@@ -195,8 +196,14 @@
         tl.to(heroRule, { opacity: 1, duration: 0.4, ease: 'power2.out' }, 2.1);
       }
 
-      tl.to(heroTitle, { opacity: 1, y: 0, duration: 1.0, ease: 'power3.out' }, 2.4)
-        .to(navMenu, { opacity: 1, duration: 0.6, ease: 'power3.out' }, 2.8);
+      tl.to(heroTitleLines, {
+          opacity: 1,
+          y: 0,
+          duration: 0.9,
+          ease: 'power3.out',
+          stagger: 0.18
+        }, 2.4)
+        .to(navMenu, { opacity: 1, duration: 0.6, ease: 'power3.out' }, 3.0);
     };
 
     // Preload hero image, then run sequence
