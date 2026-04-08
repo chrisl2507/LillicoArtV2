@@ -434,7 +434,7 @@
     var csAnimating = false;
     var csTimer = null;
     var CS_INTERVAL = 5000;
-    var CS_PEEK = 105;    // percent: how far peek slides sit beyond stage edge
+    var CS_PEEK = 62;     // percent: adjacent slides peek ~38% into the flanking space
     var CS_DUR  = 0.65;   // transition duration in seconds
     var N = csSlides.length;
 
@@ -448,7 +448,7 @@
     }
 
     function csOpacityFor(slideIdx) {
-      return slideIdx === csCurrentIdx ? 1 : 0.38;
+      return slideIdx === csCurrentIdx ? 1 : 0.22;
     }
 
     // Set initial positions
@@ -470,14 +470,14 @@
       // (it's off-centre, so the snap is imperceptible to the viewer)
       gsap.set(csSlides[otherIdx], {
         x: (goingRight ? CS_PEEK : -CS_PEEK) + '%',
-        opacity: 0.38,
+        opacity: 0.22,
         zIndex: 1
       });
 
       // Animate: old active exits to the opposite peek
       gsap.to(csSlides[oldIdx], {
         x: (goingRight ? -CS_PEEK : CS_PEEK) + '%',
-        opacity: 0.38,
+        opacity: 0.22,
         zIndex: 1,
         duration: CS_DUR,
         ease: 'power2.inOut'

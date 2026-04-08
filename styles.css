@@ -764,7 +764,7 @@ body.nav-open { overflow: hidden; }
   background: var(--ink);
   padding: 5vh 0 6vh;
   position: relative;
-  overflow: hidden; /* clips peek slides at section edges */
+  overflow-x: clip; /* clips peek slides that exceed viewport */
 }
 
 .featured-carousel__header {
@@ -781,6 +781,8 @@ body.nav-open { overflow: hidden; }
   width: min(76vw, 960px);
   margin: 0 auto;
   /* no overflow:hidden — peek slides extend beyond stage edges, section clips them */
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 12%, #000 88%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, #000 12%, #000 88%, transparent 100%);
 }
 
 .carousel-slide {
@@ -824,6 +826,8 @@ body.nav-open { overflow: hidden; }
   .featured-carousel__stage {
     width: 100%;
     overflow: hidden; /* no peek on narrow screens */
+    -webkit-mask-image: none;
+    mask-image: none;
   }
 
   .carousel-info {
