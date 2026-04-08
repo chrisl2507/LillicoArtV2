@@ -1514,6 +1514,11 @@ body.nav-open { overflow: hidden; }
   overflow: hidden;
 }
 
+body.page-interior .gallery-immersive,
+body.page-interior .gallery-grid-view {
+  margin-top: -64px;
+}
+
 .gallery-piece {
   position: absolute;
   inset: 0;
