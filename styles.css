@@ -1132,6 +1132,35 @@ body.nav-open { overflow: hidden; }
   }
 }
 
+/* Portrait pair — asymmetric stagger on desktop */
+@media (min-width: 900px) {
+  .portrait-pair .portrait-statement:first-child {
+    padding-top: 4vh;
+    padding-bottom: 14vh;
+  }
+  .portrait-pair .portrait-statement:last-child {
+    padding-top: 14vh;
+    padding-bottom: 4vh;
+  }
+  /* Remove the vertical rule between them — asymmetric hang doesn't need it */
+  .portrait-pair .portrait-statement + .portrait-statement {
+    border-left: none;
+  }
+  /* Reintroduce a single umber hairline, offset from centre */
+  .portrait-pair {
+    position: relative;
+  }
+  .portrait-pair::before {
+    content: '';
+    position: absolute;
+    top: 20%;
+    bottom: 20%;
+    left: 50%;
+    width: 1px;
+    background: rgba(139, 111, 71, 0.25);
+  }
+}
+
 
 /* ============================================
    TEXT INTERRUPTION — The quiet room
