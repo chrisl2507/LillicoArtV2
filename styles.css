@@ -2277,6 +2277,71 @@ body.page-interior .gallery-grid-view {
   }
 }
 
+/* Press list — about page */
+.press-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.press-item {
+  display: grid;
+  grid-template-columns: 1fr 2fr auto;
+  align-items: baseline;
+  gap: var(--space-lg);
+  padding: var(--space-md) 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  text-align: left;
+}
+
+.press-publication {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.6rem;
+  font-weight: 500;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--silver);
+}
+
+.press-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: var(--text-md);
+  font-style: italic;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.92);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.press-title:hover {
+  color: var(--umber);
+}
+
+.press-date {
+  color: var(--silver);
+}
+
+@media (max-width: 768px) {
+  .press-item {
+    grid-template-columns: 1fr;
+    gap: var(--space-xs);
+    text-align: left;
+  }
+}
+
+/* Hero subtitle — sits beneath hero-title for editorial pairing */
+.hero-subtitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: var(--text-md);
+  font-style: italic;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 30ch;
+  margin-top: var(--space-sm);
+  line-height: 1.4;
+}
+
 /* About snippet on homepage */
 .about-snippet {
   display: grid;
