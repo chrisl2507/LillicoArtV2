@@ -2330,6 +2330,56 @@ body.page-interior .gallery-grid-view {
   }
 }
 
+/* FAQ — commissions page, simple <details>/<summary> */
+.faq-list {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.faq-item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: var(--space-md) 0;
+}
+
+.faq-item summary {
+  cursor: pointer;
+  list-style: none;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: var(--text-md);
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.92);
+  padding-right: var(--space-lg);
+  position: relative;
+  transition: color var(--transition-fast);
+}
+
+.faq-item summary::-webkit-details-marker { display: none; }
+
+.faq-item summary::after {
+  content: "+";
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: var(--silver);
+  transition: transform var(--transition-fast), color var(--transition-fast);
+}
+
+.faq-item[open] summary::after {
+  content: "−";
+  color: var(--umber);
+}
+
+.faq-item summary:hover { color: var(--umber); }
+
+.faq-item p {
+  margin-top: var(--space-sm);
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.75;
+  max-width: 65ch;
+}
+
 /* Hero subtitle — sits beneath hero-title for editorial pairing */
 .hero-subtitle {
   font-family: 'Cormorant Garamond', serif;

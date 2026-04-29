@@ -10,6 +10,9 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.lillicoart.com">
   <meta property="og:image" content="https://www.lillicoart.com/includes/Images/masculinity.webp">
+  <meta property="og:image:width" content="1400">
+  <meta property="og:image:height" content="972">
+  <meta property="og:image:alt" content="Masculinity — charcoal portrait, softness as strength, tenderness and bloom">
   <meta name="twitter:card" content="summary_large_image">
 
   <!-- Preconnect to external origins -->
@@ -57,12 +60,14 @@
   {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
+    "@id": "https://www.lillicoart.com/#business",
     "name": "Lillico Art",
     "description": "Hand-drawn charcoal and graphite portrait commissions by Esme Lillico, based in Suffolk, UK.",
     "url": "https://www.lillicoart.com",
     "image": "https://www.lillicoart.com/includes/Images/masculinity.webp",
     "priceRange": "££",
     "email": "lilli.co.art@gmail.com",
+    "founder": { "@id": "https://www.lillicoart.com/#esme" },
     "address": {
       "@type": "PostalAddress",
       "addressRegion": "Suffolk",
@@ -78,7 +83,28 @@
     ],
     "knowsAbout": ["charcoal portraiture", "graphite drawing", "portrait commissions", "fine art"],
     "sameAs": [
-      "https://www.instagram.com/lillicoart"
+      "https://www.instagram.com/lilli.coart/",
+      "https://www.collectartwork.org/post/esme-lillico-figurative-art"
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD Person -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://www.lillicoart.com/#esme",
+    "name": "Esme Lillico",
+    "jobTitle": "Portrait Artist",
+    "description": "Suffolk-based charcoal and graphite portrait artist. MFA candidate. Exhibited in Halifax and Sheffield.",
+    "url": "https://www.lillicoart.com",
+    "image": "https://www.lillicoart.com/includes/Images/masculinity.webp",
+    "knowsAbout": ["Charcoal portraiture", "Graphite drawing", "Figure studies", "Fine art commissions"],
+    "worksFor": { "@id": "https://www.lillicoart.com/#business" },
+    "sameAs": [
+      "https://www.instagram.com/lilli.coart/",
+      "https://www.collectartwork.org/post/esme-lillico-figurative-art"
     ]
   }
   </script>
