@@ -62,9 +62,9 @@
     if (consent === 'granted') {
       loadGA();
     } else if (consent === 'denied') {
-      // Respect the choice — do nothing
+      // Respect the choice - do nothing
     } else {
-      // null or unset — show banner
+      // null or unset - show banner
       showBanner();
     }
   }
