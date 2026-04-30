@@ -10,7 +10,7 @@
   --ink: #0d0d0d;
   --graphite: #2A2A2A;
   --slate: #6b6b6b;
-  --silver: #8a8a8a;
+  --silver: #a0a0a0;
   --paper: #f5f3f0;
   --canvas: #eae6e1;
   --umber: #8b6f47;
@@ -97,10 +97,13 @@ html {
 
 /* --- Typography --- */
 
+/* Headings default to upright. Italic is opted into deliberately on hero
+   titles, the artist statement, curatorial captions, and the about-quote -
+   it earns its moment instead of being the dominant voice. */
 h1, h2, h3, h4 {
   font-family: 'Cormorant Garamond', Georgia, serif;
   font-weight: 300;
-  font-style: italic;
+  font-style: normal;
   line-height: 1.1;
   letter-spacing: -0.02em;
   color: rgba(255,255,255,0.92);
@@ -143,7 +146,7 @@ h6 { font-size: var(--text-base); font-weight: 600; }
   font-size: 0.75rem;
   font-weight: 500;
   font-style: normal;
-  letter-spacing: 0.32em;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
   color: rgba(255,255,255,0.5);
   margin-bottom: 2rem;
@@ -154,7 +157,7 @@ body {
   font-family: 'Inter', sans-serif;
   font-size: var(--text-base);
   font-weight: 300;
-  line-height: 1.7;
+  line-height: 1.6;
   color: rgba(255,255,255,0.72);
   background-color: var(--ink);
   -webkit-font-smoothing: antialiased;
@@ -327,6 +330,11 @@ blockquote {
 
 /* ============================================
    NAVIGATION
+   --------------------------------------------
+   WARNING: nav and .nav-brand are also defined as inline critical CSS
+   inside the <head> of every HTML file (for instant first-paint render).
+   Any change to these two selectors must be made in BOTH places, or the
+   first-paint nav will render with stale styling until the stylesheet loads.
    ============================================ */
 
 nav {
@@ -624,6 +632,8 @@ body.nav-open { overflow: hidden; }
 .hero--home .hero-title {
   font-size: clamp(4rem, 12vw, 9rem);
   line-height: 0.95;
+  /* Looser tracking at display size so single short words breathe */
+  letter-spacing: -0.01em;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -1015,6 +1025,7 @@ body.nav-open { overflow: hidden; }
 }
 
 .commission-cta-section h2 {
+  font-style: italic;
   color: var(--umber);
   margin-bottom: var(--space-lg);
 }
@@ -1216,6 +1227,7 @@ body.nav-open { overflow: hidden; }
 }
 
 .text-interruption h2 {
+  font-style: italic;
   color: var(--white);
   margin-bottom: var(--space-xl);
 }
@@ -1313,7 +1325,12 @@ body.nav-open { overflow: hidden; }
   text-align: center;
 }
 
+.contact-minimal__inner p {
+  line-height: 1.75;
+}
+
 .contact-minimal h2 {
+  font-style: italic;
   margin-bottom: var(--space-lg);
 }
 
@@ -1623,8 +1640,8 @@ body.page-interior .gallery-grid-view {
   align-items: center;
   gap: 0.75rem;
   background: none;
-  border: 1px solid rgba(255,255,255,0.15);
-  color: rgba(255,255,255,0.45);
+  border: 1px solid rgba(255,255,255,0.28);
+  color: rgba(255,255,255,0.72);
   font-family: 'Cormorant Garamond', Georgia, serif;
   font-size: 0.75rem;
   font-weight: 500;
@@ -2050,15 +2067,15 @@ body.page-interior .gallery-grid-view {
   pointer-events: none;
 }
 
-/* Desktop - paragraphs left, title right */
+/* Desktop - title (left) precedes the bio (right) it titles */
 @media (min-width: 900px) {
   .text-interruption__inner {
     max-width: min(88%, 1000px);
     display: grid;
-    grid-template-columns: 1.5fr 1fr;
+    grid-template-columns: 1fr 1.5fr;
     grid-template-areas:
-      "p1 lbl"
-      "p2 ttl";
+      "lbl p1"
+      "ttl p2";
     column-gap: 5rem;
     row-gap: var(--space-lg);
     text-align: left;
