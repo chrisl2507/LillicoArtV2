@@ -1,5 +1,5 @@
 /* ============================================
-   Lillico Art — Navigation, Lenis, GSAP,
+   Lillico Art - Navigation, Lenis, GSAP,
    Opening Sequence, Gallery, Page Transitions
    ============================================ */
 (function () {
@@ -8,7 +8,7 @@
   var isMobile = window.innerWidth <= 768;
 
   /* ============================================
-     FAILSAFE — If GSAP didn't load, show the page
+     FAILSAFE - If GSAP didn't load, show the page
      ============================================ */
   if (typeof gsap === 'undefined') {
     document.body.style.opacity = '1';
@@ -16,7 +16,7 @@
   }
 
   /* ============================================
-     LENIS — Smooth scroll (desktop only)
+     LENIS - Smooth scroll (desktop only)
      ============================================ */
   var lenis = null;
 
@@ -40,7 +40,7 @@
       lenis = null;
     }
   } else {
-    // No Lenis — just keep ScrollTrigger updated
+    // No Lenis - just keep ScrollTrigger updated
     if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
       gsap.ticker.add(function () { ScrollTrigger.update(); });
     }
@@ -51,7 +51,7 @@
      MOBILE NAVIGATION
      ============================================ */
   /* ============================================
-     ACTIVE NAV LINK — highlight current page
+     ACTIVE NAV LINK - highlight current page
      ============================================ */
   var currentPath = window.location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('.nav-link').forEach(function (link) {
@@ -100,10 +100,10 @@
 
 
   /* ============================================
-     PAGE TRANSITIONS — GSAP fade
+     PAGE TRANSITIONS - GSAP fade
      ============================================ */
 
-  // Fade in on every page (except home — has its own opening sequence)
+  // Fade in on every page (except home - has its own opening sequence)
   if (typeof gsap !== 'undefined' && !document.body.classList.contains('home')) {
     document.body.style.animation = 'none';
     gsap.fromTo(document.body,
@@ -118,7 +118,7 @@
     if (!href || href.startsWith('#') || href.startsWith('http') || href.startsWith('mailto')) return;
 
     link.addEventListener('click', function (e) {
-      // Same-page anchor — smooth scroll instead of reloading
+      // Same-page anchor - smooth scroll instead of reloading
       if (href.indexOf('#') !== -1) {
         var parts = href.split('#');
         var linkPage = parts[0];
@@ -171,7 +171,7 @@
     var heroTitleLines = document.querySelectorAll('.hero-title__line');
     var navMenu = document.querySelector('.nav-menu');
 
-    // Cancel CSS failsafe animation — GSAP is in control now
+    // Cancel CSS failsafe animation - GSAP is in control now
     document.body.style.animation = 'none';
     // Set initial hidden states
     gsap.set(document.body, { opacity: 1 });
@@ -249,7 +249,7 @@
       });
     }
 
-    // --- Featured carousel — fade in on scroll enter ---
+    // --- Featured carousel - fade in on scroll enter ---
     if (document.querySelector('.featured-carousel__stage')) {
       gsap.from('.featured-carousel__stage', {
         opacity: 0,
@@ -263,7 +263,7 @@
       });
     }
 
-    // --- Portrait statement — clip-path wipe reveal ---
+    // --- Portrait statement - clip-path wipe reveal ---
     gsap.utils.toArray('.portrait-statement__inner').forEach(function (el) {
       gsap.from(el, {
         clipPath: 'inset(100% 0% 0% 0%)',
@@ -308,7 +308,7 @@
       });
     }
 
-    // --- Process numbers — stagger on enter ---
+    // --- Process numbers - stagger on enter ---
     gsap.utils.toArray('.process-number').forEach(function (num, i) {
       gsap.from(num, {
         opacity: 0,
@@ -339,7 +339,7 @@
       });
     });
 
-    // --- Section titles — horizontal slide in ---
+    // --- Section titles - horizontal slide in ---
     gsap.utils.toArray('.section-title').forEach(function (title) {
       gsap.from(title, {
         x: -60,
@@ -354,7 +354,7 @@
       });
     });
 
-    // --- Commission CTA reveal — heading fades in without movement (confident) ---
+    // --- Commission CTA reveal - heading fades in without movement (confident) ---
     if (document.querySelector('.commission-cta-section')) {
       gsap.from('.commission-cta-section h2', {
         opacity: 0,
@@ -537,7 +537,7 @@
 
 
   /* ============================================
-     GALLERY — Immersive viewer (Mode 1)
+     GALLERY - Immersive viewer (Mode 1)
      ============================================ */
   var immersive = document.querySelector('#gallery-immersive');
   var gridView = document.querySelector('#gallery-grid-view');
@@ -662,7 +662,7 @@
     updateInfo(0);
     updateThumbs(0);
 
-    // Stop Lenis on gallery immersive mode — wheel is handled above
+    // Stop Lenis on gallery immersive mode - wheel is handled above
     if (lenis) lenis.stop();
 
     // Fade in the gallery page
@@ -675,7 +675,7 @@
 
 
   /* ============================================
-     GALLERY — Mode toggle (Immersive ↔ Grid)
+     GALLERY - Mode toggle (Immersive ↔ Grid)
      ============================================ */
   var modeToggle = immersive ? immersive.querySelector('.gallery-mode-toggle') : null;
   var backBtn = gridView ? gridView.querySelector('.gallery-back-btn') : null;
@@ -717,7 +717,7 @@
 
 
   /* ============================================
-     GALLERY — Grid item click → immersive viewer
+     GALLERY - Grid item click → immersive viewer
      ============================================ */
   if (immersive && gridView && typeof gsap !== 'undefined') {
     var gridItems = document.querySelectorAll('.gallery-grid .gallery-item');
@@ -743,7 +743,7 @@
 
 
   /* ============================================
-     GALLERY — Grid filters (cross-dissolve)
+     GALLERY - Grid filters (cross-dissolve)
      ============================================ */
   var filterBtns = document.querySelectorAll('.filter-btn');
   if (filterBtns.length > 0) {
@@ -778,7 +778,7 @@
 
 
   /* ============================================
-     GALLERY — Fullscreen
+     GALLERY - Fullscreen
      ============================================ */
   if (immersive) {
     var fullscreenBtn = immersive.querySelector('.gallery-fullscreen-btn');
@@ -831,11 +831,11 @@
 
 
   /* ============================================
-     BFCACHE — Restore visibility on back/forward
+     BFCACHE - Restore visibility on back/forward
      ============================================ */
   window.addEventListener('pageshow', function (e) {
     if (e.persisted) {
-      // Page was restored from bfcache — body may be at opacity 0
+      // Page was restored from bfcache - body may be at opacity 0
       document.body.style.opacity = '1';
       document.body.style.animation = 'none';
       // Reveal any still-hidden elements in the viewport
@@ -850,7 +850,7 @@
 
 
   /* ============================================
-     REVEAL SAFETY NET — Catch any elements the
+     REVEAL SAFETY NET - Catch any elements the
      IntersectionObserver missed after 2.5 s
      ============================================ */
   setTimeout(function () {

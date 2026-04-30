@@ -1,5 +1,5 @@
 /* ============================================
-   LILLICO ART — Design System & Base Styles
+   LILLICO ART - Design System & Base Styles
    "A site that feels drawn, not built."
    Vanilla CSS · Lenis · GSAP · Mobile-first
    ============================================ */
@@ -91,7 +91,7 @@ img {
 
 html {
   -webkit-text-size-adjust: 100%;
-  /* Lenis handles smooth scroll — remove native */
+  /* Lenis handles smooth scroll - remove native */
 }
 
 
@@ -121,7 +121,7 @@ h4 { font-size: var(--text-lg); }
 h5 { font-size: var(--text-md); }
 h6 { font-size: var(--text-base); font-weight: 600; }
 
-/* Section title — editorial scale */
+/* Section title - editorial scale */
 .section-title {
   font-family: 'Cormorant Garamond', serif;
   font-size: clamp(2.8rem, 5.5vw, 5rem);
@@ -133,7 +133,7 @@ h6 { font-size: var(--text-base); font-weight: 600; }
 }
 
 .section-title em {
-  font-style: normal; /* Upright within italic — visual tension */
+  font-style: normal; /* Upright within italic - visual tension */
   color: var(--umber);
 }
 
@@ -149,7 +149,7 @@ h6 { font-size: var(--text-base); font-weight: 600; }
   margin-bottom: 2rem;
 }
 
-/* Body — dark is the default */
+/* Body - dark is the default */
 body {
   font-family: 'Inter', sans-serif;
   font-size: var(--text-base);
@@ -159,13 +159,13 @@ body {
   background-color: var(--ink);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* Start hidden — GSAP fades in. CSS animation failsafe ensures
+  /* Start hidden - GSAP fades in. CSS animation failsafe ensures
      body becomes visible even if CDN scripts fail to load. */
   opacity: 0;
   animation: body-failsafe 0.4s ease 2s forwards;
 }
 
-/* Homepage — longer failsafe delay for opening sequence */
+/* Homepage - longer failsafe delay for opening sequence */
 body.home {
   opacity: 0;
   animation: body-failsafe 0.4s ease 3.5s forwards;
@@ -176,7 +176,7 @@ body.home {
   to { opacity: 1; }
 }
 
-/* --- Page-draw line — charcoal mark on load --- */
+/* --- Page-draw line - charcoal mark on load --- */
 .page-draw {
   position: fixed;
   top: 0; left: 0;
@@ -232,7 +232,7 @@ blockquote {
   color: var(--slate);
 }
 
-/* --- Light sections — earned contrast moments --- */
+/* --- Light sections - earned contrast moments --- */
 .section-light {
   background: var(--paper);
   color: var(--graphite);
@@ -465,7 +465,7 @@ body.page-interior nav {
 .nav-link-cta:hover { color: #a8895c; }
 .nav-link-cta.active { color: var(--umber); }
 
-/* Nav menu — mobile: full-screen overlay */
+/* Nav menu - mobile: full-screen overlay */
 .nav-menu {
   list-style: none;
   position: fixed;
@@ -517,7 +517,7 @@ body.nav-open { overflow: hidden; }
 
 
 /* ============================================
-   HERO — 100svh, art dominates
+   HERO - 100svh, art dominates
    ============================================ */
 
 .hero {
@@ -527,7 +527,7 @@ body.nav-open { overflow: hidden; }
   background: var(--ink);
 }
 
-/* Homepage hero — full viewport statement */
+/* Homepage hero - full viewport statement */
 .hero--home {
   height: 100svh;
 }
@@ -547,7 +547,7 @@ body.nav-open { overflow: hidden; }
   object-position: center center;
 }
 
-/* Vignette — draws the eye to the centre of the artwork */
+/* Vignette - draws the eye to the centre of the artwork */
 .hero-vignette {
   position: absolute;
   inset: 0;
@@ -556,7 +556,7 @@ body.nav-open { overflow: hidden; }
   pointer-events: none;
 }
 
-/* Gradient overlay — real element for GSAP control */
+/* Gradient overlay - real element for GSAP control */
 .hero-gradient {
   position: absolute;
   inset: 0;
@@ -586,7 +586,7 @@ body.nav-open { overflow: hidden; }
   margin-bottom: 1rem;
 }
 
-/* Credential line — italic, understated authority */
+/* Credential line - italic, understated authority */
 .hero-credentials {
   font-family: 'Cormorant Garamond', serif;
   font-size: clamp(0.75rem, 1vw, 0.95rem);
@@ -648,7 +648,7 @@ body.nav-open { overflow: hidden; }
   }
 }
 
-/* Hero CTA — text with extending line */
+/* Hero CTA - text with extending line */
 .hero-cta {
   display: inline-flex;
   align-items: center;
@@ -675,14 +675,14 @@ body.nav-open { overflow: hidden; }
 .hero-cta:hover { color: var(--white); }
 .hero-cta:hover::after { width: 72px; }
 
-/* Nav links wrapper — for GSAP targeting */
+/* Nav links wrapper - for GSAP targeting */
 .nav-links {
   display: contents;
 }
 
 
 /* ============================================
-   COMPOSITION SPLIT — Horizontal tension
+   COMPOSITION SPLIT - Horizontal tension
    ============================================ */
 
 .composition-split {
@@ -757,7 +757,7 @@ body.nav-open { overflow: hidden; }
 
 
 /* ============================================
-   FEATURED CAROUSEL — Homepage artwork viewer
+   FEATURED CAROUSEL - Homepage artwork viewer
    ============================================ */
 
 .featured-carousel {
@@ -772,7 +772,7 @@ body.nav-open { overflow: hidden; }
   padding: 0 5% 2.5vh;
 }
 
-/* Stage — portrait aspect ratio matches artwork so contain = no letterboxing.
+/* Stage - portrait aspect ratio matches artwork so contain = no letterboxing.
    Narrower than section so peek slides are visible in the flanking space. */
 .featured-carousel__stage {
   position: relative;
@@ -780,7 +780,7 @@ body.nav-open { overflow: hidden; }
   max-height: 80vh;       /* prevents the stage being taller than the screen */
   width: min(76vw, 960px);
   margin: 0 auto;
-  /* no overflow:hidden — peek slides extend beyond stage edges, section clips them */
+  /* no overflow:hidden - peek slides extend beyond stage edges, section clips them */
   -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 12%, #000 88%, transparent 100%);
   mask-image: linear-gradient(to right, transparent 0%, #000 12%, #000 88%, transparent 100%);
 }
@@ -797,7 +797,7 @@ body.nav-open { overflow: hidden; }
   pointer-events: auto;
 }
 
-/* Contain shows the full artwork — stage ratio matches images so no dead space */
+/* Contain shows the full artwork - stage ratio matches images so no dead space */
 .carousel-slide img {
   position: absolute;
   inset: 0;
@@ -810,7 +810,7 @@ body.nav-open { overflow: hidden; }
   box-shadow: 0 20px 60px rgba(0,0,0,0.5);
 }
 
-/* Info bar — centred, width approximates the height-constrained stage width */
+/* Info bar - centred, width approximates the height-constrained stage width */
 .carousel-info {
   max-width: 560px;
   width: 90%;
@@ -888,7 +888,7 @@ body.nav-open { overflow: hidden; }
 
 
 /* ============================================
-   SECTION DIVIDERS — Umber line, centred
+   SECTION DIVIDERS - Umber line, centred
    ============================================ */
 
 .home .section-divider {
@@ -908,7 +908,7 @@ body.nav-open { overflow: hidden; }
 
 
 /* ============================================
-   CREDENTIALS BAR — Quiet authority
+   CREDENTIALS BAR - Quiet authority
    ============================================ */
 
 .credentials-bar {
@@ -985,7 +985,7 @@ body.nav-open { overflow: hidden; }
 
 
 /* ============================================
-   COMMISSION CTA — Warm conversion section
+   COMMISSION CTA - Warm conversion section
    ============================================ */
 
 .commission-cta-section {
@@ -1035,7 +1035,7 @@ body.nav-open { overflow: hidden; }
 
 
 /* ============================================
-   PORTRAIT STATEMENT — Full-width single piece
+   PORTRAIT STATEMENT - Full-width single piece
    ============================================ */
 
 .portrait-statement {
@@ -1112,7 +1112,7 @@ body.nav-open { overflow: hidden; }
 
 
 /* ============================================
-   PORTRAIT PAIR — Two pieces side by side (desktop)
+   PORTRAIT PAIR - Two pieces side by side (desktop)
    ============================================ */
 
 @media (min-width: 769px) {
@@ -1126,7 +1126,7 @@ body.nav-open { overflow: hidden; }
     padding: 6vh 4vw;
   }
 
-  /* Suppress horizontal divider — replace with vertical rule */
+  /* Suppress horizontal divider - replace with vertical rule */
   .portrait-pair .portrait-statement + .portrait-statement::before {
     display: none;
   }
@@ -1140,7 +1140,7 @@ body.nav-open { overflow: hidden; }
     width: 100%;
   }
 
-  /* Natural proportions — remove forced square crop */
+  /* Natural proportions - remove forced square crop */
   .portrait-pair .portrait-statement__inner {
     aspect-ratio: unset;
   }
@@ -1153,7 +1153,7 @@ body.nav-open { overflow: hidden; }
   }
 }
 
-/* Portrait pair — asymmetric stagger on desktop */
+/* Portrait pair - asymmetric stagger on desktop */
 @media (min-width: 900px) {
   .portrait-pair .portrait-statement:first-child {
     padding-top: 4vh;
@@ -1163,7 +1163,7 @@ body.nav-open { overflow: hidden; }
     padding-top: 14vh;
     padding-bottom: 4vh;
   }
-  /* Remove the vertical rule between them — asymmetric hang doesn't need it */
+  /* Remove the vertical rule between them - asymmetric hang doesn't need it */
   .portrait-pair .portrait-statement + .portrait-statement {
     border-left: none;
   }
@@ -1184,7 +1184,7 @@ body.nav-open { overflow: hidden; }
 
 
 /* ============================================
-   TEXT INTERRUPTION — The quiet room
+   TEXT INTERRUPTION - The quiet room
    ============================================ */
 
 .text-interruption {
@@ -1236,7 +1236,7 @@ body.nav-open { overflow: hidden; }
 
 
 /* ============================================
-   PROCESS STEPS — Horizontal, not stacked
+   PROCESS STEPS - Horizontal, not stacked
    ============================================ */
 
 .process-section {
@@ -1286,7 +1286,7 @@ body.nav-open { overflow: hidden; }
 
 
 /* ============================================
-   CONTACT — Minimal, full-width dark
+   CONTACT - Minimal, full-width dark
    ============================================ */
 
 .contact-minimal {
@@ -1333,7 +1333,7 @@ body.nav-open { overflow: hidden; }
 
 
 /* ============================================
-   CONTACT FORM — Full page version
+   CONTACT FORM - Full page version
    ============================================ */
 
 #contact h2 {
@@ -1503,7 +1503,7 @@ body.nav-open { overflow: hidden; }
 
 
 /* ============================================
-   GALLERY — Immersive single-piece viewer
+   GALLERY - Immersive single-piece viewer
    ============================================ */
 
 .gallery-immersive {
@@ -1544,7 +1544,7 @@ body.page-interior .gallery-grid-view {
   box-shadow: 0 40px 120px rgba(0,0,0,0.6);
 }
 
-/* Counter — bottom left */
+/* Counter - bottom left */
 .gallery-immersive__counter {
   position: absolute;
   bottom: 1.5rem;
@@ -1562,7 +1562,7 @@ body.page-interior .gallery-grid-view {
 .gallery-sep      { color: var(--umber); }
 .gallery-total    { color: rgba(255,255,255,0.3); }
 
-/* Title + meta — bottom centre */
+/* Title + meta - bottom centre */
 .gallery-immersive__info {
   position: absolute;
   bottom: 1.5rem;
@@ -1584,7 +1584,7 @@ body.page-interior .gallery-grid-view {
   color: var(--white);
 }
 
-/* Prev / Next — bottom right */
+/* Prev / Next - bottom right */
 .gallery-immersive__nav {
   position: absolute;
   bottom: 1.5rem;
@@ -1614,7 +1614,7 @@ body.page-interior .gallery-grid-view {
 
 .gallery-prev:hover, .gallery-next:hover { color: var(--white); }
 
-/* Mode toggle — top right */
+/* Mode toggle - top right */
 .gallery-mode-toggle {
   position: absolute;
   top: 5rem;
@@ -1643,7 +1643,7 @@ body.page-interior .gallery-grid-view {
   color: var(--white);
 }
 
-/* Fullscreen button — top left */
+/* Fullscreen button - top left */
 .gallery-fullscreen-btn {
   position: absolute;
   top: 5rem;
@@ -1666,7 +1666,7 @@ body.page-interior .gallery-grid-view {
   color: var(--white);
 }
 
-/* Cursor hint — click to fullscreen */
+/* Cursor hint - click to fullscreen */
 .gallery-piece img {
   cursor: zoom-in;
 }
@@ -1686,7 +1686,7 @@ body.page-interior .gallery-grid-view {
 
 
 /* ============================================
-   GALLERY — Thumbnail filmstrip
+   GALLERY - Thumbnail filmstrip
    ============================================ */
 
 .gallery-thumbstrip {
@@ -1743,7 +1743,7 @@ body.page-interior .gallery-grid-view {
 
 
 /* ============================================
-   GALLERY — Grid view (Mode 2)
+   GALLERY - Grid view (Mode 2)
    ============================================ */
 
 .gallery-grid-view {
@@ -1928,7 +1928,7 @@ body.page-interior .gallery-grid-view {
 
 
 /* ============================================
-   REVEAL ANIMATIONS (GSAP handles most — CSS fallback)
+   REVEAL ANIMATIONS (GSAP handles most - CSS fallback)
    ============================================ */
 
 .reveal {
@@ -1994,11 +1994,11 @@ body.page-interior .gallery-grid-view {
 
 
 /* ============================================
-   GLASS MORPHISM — Homepage Content Panels
+   GLASS MORPHISM - Homepage Content Panels
    Frosted glass cards against dark sections.
    ============================================ */
 
-/* Ambient umber glow behind glass cards — tighter on homepage */
+/* Ambient umber glow behind glass cards - tighter on homepage */
 .text-interruption::after,
 .contact-minimal::after {
   content: '';
@@ -2013,7 +2013,7 @@ body.page-interior .gallery-grid-view {
   z-index: 0;
 }
 
-/* Artist bio — glass card */
+/* Artist bio - glass card */
 .text-interruption__inner {
   position: relative;
   z-index: 1;
@@ -2029,7 +2029,7 @@ body.page-interior .gallery-grid-view {
     0 12px 32px rgba(0, 0, 0, 0.3);
 }
 
-/* Gradient border — directional light catching the glass edge */
+/* Gradient border - directional light catching the glass edge */
 .text-interruption__inner::before {
   content: '';
   position: absolute;
@@ -2050,7 +2050,7 @@ body.page-interior .gallery-grid-view {
   pointer-events: none;
 }
 
-/* Desktop — paragraphs left, title right */
+/* Desktop - paragraphs left, title right */
 @media (min-width: 900px) {
   .text-interruption__inner {
     max-width: min(88%, 1000px);
@@ -2095,7 +2095,7 @@ body.page-interior .gallery-grid-view {
   }
 }
 
-/* Contact form — glass card */
+/* Contact form - glass card */
 .contact-form {
   position: relative;
   padding: clamp(2rem, 4vw, 3rem) clamp(1.5rem, 4vw, 3rem);
@@ -2131,7 +2131,7 @@ body.page-interior .gallery-grid-view {
   pointer-events: none;
 }
 
-/* Portrait captions — glass pill */
+/* Portrait captions - glass pill */
 .portrait-statement__caption {
   background: rgba(255, 255, 255, 0.04);
   backdrop-filter: blur(14px);
@@ -2142,7 +2142,7 @@ body.page-interior .gallery-grid-view {
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
 }
 
-/* Composition text panel — warm gradient shimmer */
+/* Composition text panel - warm gradient shimmer */
 .composition-split__text {
   background: linear-gradient(155deg, rgba(139, 111, 71, 0.12) 0%, transparent 55%);
 }
@@ -2225,7 +2225,7 @@ body.page-interior .gallery-grid-view {
   width: 100%;
 }
 
-/* About page quote — break the grid deliberately */
+/* About page quote - break the grid deliberately */
 .about-quote {
   margin: 4rem -8%;
   padding: 3rem 8%;
@@ -2243,7 +2243,7 @@ body.page-interior .gallery-grid-view {
   margin-bottom: var(--space-md);
 }
 
-/* Process section — lifted background */
+/* Process section - lifted background */
 .section-process {
   background: #161616;
 }
@@ -2277,7 +2277,7 @@ body.page-interior .gallery-grid-view {
   }
 }
 
-/* Press list — about page */
+/* Press list - about page */
 .press-list {
   list-style: none;
   padding: 0;
@@ -2330,7 +2330,7 @@ body.page-interior .gallery-grid-view {
   }
 }
 
-/* FAQ — commissions page, simple <details>/<summary> */
+/* FAQ - commissions page, simple <details>/<summary> */
 .faq-list {
   border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
@@ -2380,7 +2380,7 @@ body.page-interior .gallery-grid-view {
   max-width: 65ch;
 }
 
-/* Hero subtitle — sits beneath hero-title for editorial pairing */
+/* Hero subtitle - sits beneath hero-title for editorial pairing */
 .hero-subtitle {
   font-family: 'Cormorant Garamond', serif;
   font-size: var(--text-md);
@@ -2594,7 +2594,7 @@ body.page-interior .gallery-grid-view {
 
   .reveal { transform: translateY(10px); }
 
-  /* Composition split — stack on mobile */
+  /* Composition split - stack on mobile */
   .composition-split {
     grid-template-columns: 1fr;
     max-height: none;
@@ -2615,7 +2615,7 @@ body.page-interior .gallery-grid-view {
     max-height: 80vh;
   }
 
-  /* Portrait statement — wider on mobile */
+  /* Portrait statement - wider on mobile */
   .portrait-statement__inner,
   .portrait-statement__caption {
     width: 90vw;
@@ -2635,13 +2635,13 @@ body.page-interior .gallery-grid-view {
     padding: 10vh 0;
   }
 
-  /* Process — stack on mobile */
+  /* Process - stack on mobile */
   .process-steps {
     grid-template-columns: 1fr 1fr;
     gap: var(--space-xl);
   }
 
-  /* Gallery immersive — mobile adjustments */
+  /* Gallery immersive - mobile adjustments */
   .gallery-piece img {
     max-width: 90vw;
     max-height: 75svh;
@@ -2674,7 +2674,7 @@ body.page-interior .gallery-grid-view {
     transform: translateX(-50%);
   }
 
-  /* Filmstrip — smaller on mobile, above nav buttons */
+  /* Filmstrip - smaller on mobile, above nav buttons */
   .gallery-thumbstrip {
     bottom: 5rem;
     max-width: 90vw;
@@ -2687,7 +2687,7 @@ body.page-interior .gallery-grid-view {
     height: 36px;
   }
 
-  /* Gallery grid — one column */
+  /* Gallery grid - one column */
   .gallery-grid {
     grid-template-columns: 1fr;
     grid-auto-rows: auto;
@@ -2715,7 +2715,7 @@ body.page-interior .gallery-grid-view {
     min-height: 44px;
   }
 
-  /* Glass — remove backdrop-filter on mobile for performance */
+  /* Glass - remove backdrop-filter on mobile for performance */
   .text-interruption__inner,
   .contact-form,
   .portrait-statement__caption {
